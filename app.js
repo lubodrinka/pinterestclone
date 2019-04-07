@@ -12,7 +12,7 @@ var twitterRouter = require('./routes/twitter');
 var githubRouter = require('./routes/GHlogin');
 var fbRouter = require('./routes/FBlogin');
 var pollsRouter = require('./routes/polls');
-var mysql = require('mysql'); 
+var mysql = require('mysql'); var cors = require('cors');
 var app = express();
 
 // view engine setup
@@ -24,7 +24,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
+// enable cors
+var corsOption = {
+  origin: true,
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true,
+  exposedHeaders: ['x-auth-token']
+};
+app.use(cors(corsOption));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/',twitterRouter);
@@ -47,13 +54,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 var mysql = require('mysql');/*
-global. con = mysql.createConnection({
-host: 'sql2.freesqldatabase.com',
-name: 'sql2285554',
-user: 'sql2285554',
-password:'xZ5*yQ8*',
-  database:"sql2285554",
-Port: 3306});*/
+
 global. con = mysql.createConnection({
   host: "localhost",
   user: "root",
