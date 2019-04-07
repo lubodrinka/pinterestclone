@@ -1,0 +1,271 @@
+:root {
+  --w1: 160px;
+  --w2: 320px;
+  --w3: 480px;
+  --w4: 640px;
+  --h1: 120px;
+  --h2: 200px;
+  --h3: 260px;
+  --h4: 360px;
+}
+
+body {
+  padding: 50px;
+  margin: 0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: linear-gradient(to right, #034378, #2d4e68);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  margin-top: 50px;
+}
+
+.card>a {
+  color: rgb(9, 137, 184);
+
+}
+
+.card {
+  max-width: 20vw;
+  max-height: 8vh;
+  /* Add shadows to create the "card" effect */
+  /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);*/
+  transition: 0.3s;
+  display: inline-flex;
+  align-items: baseline;
+  color: floralwhite;
+  margin: 10px 150px 10px 150px;
+
+}
+
+
+/* On mouse-over, add a deeper shadow */
+.card>a:hover {
+  filter: drop-shadow(1px 1px 1px rgb(253, 252, 252));
+
+}
+
+.card>div>* {
+  max-width: 30px;
+  border-color: blue;
+  border-radius: 50%;
+
+}
+.modal-dialog * {
+  background-image: linear-gradient(to right, #034378, #2d4e68);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: floralwhite;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 1),
+    3px 3px 3px rgba(0, 0, 0, 1),
+    4px 4px 4px rgba(0, 0, 0, 1);
+  text-overflow: clip;
+  margin-top: 5px;
+}
+
+.fa {
+  font-size: 12px;
+  font-family: 'FontAwesome' !important;
+}
+
+.fa-twitter, .fa-twitter-square {
+color:dodgerblue;
+}
+.fa-facebook, .fa-facebook-square {
+color: #034378;
+  
+}
+.fa-github, .fa-github-square{
+color: whitesmoke;
+  
+}
+#socialName {
+  word-break: normal;
+}
+
+nav {
+
+  min-height: 5vh;
+  width: 100%;
+  background-color: black;
+  display: inline-flex;
+  flex-flow: row;
+
+}
+
+#signin {
+  margin: 10px 0 5px 50px;
+
+}
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Gaegu|Gloria+Hallelujah|Great+Vibes|Indie+Flower|Lato|Open+Sans|Oswald|Permanent+Marker|Montserrat');
+
+.grid-item {
+  position: relative;
+  width: var(--w1);
+  height: var(--h1);
+  float: left;
+  border: 2px solid #000000;
+  color: #e7e7e7;
+  text-align: center;
+  text-decoration: none;
+  margin: 0px 0px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: #1e1b26;
+  box-shadow: 5px 5px 115px -14px black;
+  text-overflow: clip;
+  word-wrap: break-word;
+  border: 2px solid #333;
+  border-color: hsla(0, 0%, 0%, 0.5);
+  border-radius: 5px;
+
+}
+
+
+/* clearfix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- grid-item ---- */
+main>* {
+  box-sizing: border-box;
+}
+
+.grid-item--width1 {
+  width: var(--w1);
+}
+
+.grid-item--height1 {
+  width: var(--h1);
+}
+
+.grid-item--width2 {
+  width: var(--w2);
+}
+
+.grid-item--width3 {
+  width: var(--w3);
+}
+
+.grid-item--width4 {
+  width: var(--w4);
+}
+
+.grid-item--height2 {
+  height: var(--h2);
+}
+
+.grid-item--height3 {
+  height: var(--h3);
+}
+
+.grid-item--height4 {
+  height: var(--h4);
+}
+
+.grid {
+
+  max-width: 1200px;
+  counter-reset: grid-item;
+}
+
+.grid-item--gigante {
+  width: 480px;
+  height: 360px;
+}
+
+.grid-item>img {
+  width: 90%;
+  height: 80%;
+
+ 
+  object-fit: cover;
+
+}
+
+.grid-item>p {
+  margin: 10px 10px;
+  font-size: 12px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+
+
+}
+
+.grid-item>.comment {
+ height: 20px;
+  color: #000000;
+  background-color: #e7e7e7;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Open Sans';
+  width: 100%;
+   opacity: 0.8;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 1),
+    3px 3px 3px rgba(0, 0, 0, 1);
+  text-overflow: ellipsis;
+  transition: height 100ms ease-in 200ms;
+}
+.deleteBtn{
+  height: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  border-radius: 0px;
+background-color: red;
+
+border: 1px solid black
+}
+.deleteBtn>p{
+ 
+ margin-top: 28%;
+
+text-align: center;
+
+}
+.grid-item>.comment>div>p, .grid-item>.comment>div>.deleteBtn{
+visibility: hidden;
+
+}
+.grid-item--gigante>.comment:hover>div>p, .grid-item--gigante>.comment:hover>div>.deleteBtn  {
+visibility:visible; transition: visibility 100ms ease-in 220ms;
+}
+
+.grid-item--gigante:hover {
+color: #034378;
+background-color:darkslateblue;
+
+}
+.grid-item--gigante>.comment:hover {
+  
+height: 15%;
+  text-overflow: initial;
+}
+
+
+
+
+#voteinput {
+  width: 80%;
+}
+
+
+a:hover {
+  text-decoration-line: none;
+  text-decoration-color:none;
+}
