@@ -232,7 +232,7 @@ let logged =JSON.parse($('#modalUser').attr("value")) ;
 
     function code(myString) {
 
-        return myString ? JSON.stringify(myString.replace(/"/g, "")) : JSON.stringify("unregistered");
+        return myString ? JSON.stringify(myString.toString().replace(/"/g, "")) : JSON.stringify("unregistered");
 
     }
 
